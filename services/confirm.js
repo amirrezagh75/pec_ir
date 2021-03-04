@@ -26,9 +26,9 @@ function confirm(pin){
             }
             else reject('please provide a token')
         })
-    }
+    },
     
-    let paymentWithAddData = (token)=>{
+        paymentWithAddData = (token)=>{
         return new Promise(async (resolve,reject)=>{
             if(token){
                 let xmls = 
@@ -49,9 +49,9 @@ function confirm(pin){
             }
             else reject('please provide a token')
         })
-    }
+    },
 
-    let paymentWithAmount = (info)=>{
+        paymentWithAmount = (info)=>{
         return new Promise(async (resolve,reject)=>{
             if(info && info.token && info.OrderId && info.Amount){
                 let xmls = 
@@ -78,7 +78,8 @@ function confirm(pin){
 
     return{
         payment,
-        paymentWithAddData
+        paymentWithAddData,
+        paymentWithAmount
     }
 }
 module.exports = {

@@ -27,8 +27,12 @@ function sale (pin) {
                     </soap:Body>
                 </soap:Envelope>`
         
-                let data = await sendReq(url , xmls).then(data=>{return data}).catch(err=>reject(err))
-                resolve( xmlParser.parse(data)['soap:Envelope']['soap:Body']['SalePaymentRequestResponse']['SalePaymentRequestResult'] )
+                let data = await sendReq(url , xmls)
+                .then(data=>{return xmlParser.parse(data)['soap:Envelope']['soap:Body']['SalePaymentRequestResponse']['SalePaymentRequestResult']})
+                .catch(err=>reject(err))
+                data.link = `https://pec.shaparak.ir/NewIPG/?token=${data.Token}`
+                
+                resolve(data)
             }
             else reject('please provide "Amount" , "OrderId" and "CallBackUrl" in an object. Also you can add "AdditionalData" and "Originator" ')
         })
@@ -67,8 +71,12 @@ function sale (pin) {
                     </soap:Body>
                 </soap:Envelope>`
     
-                let data = await sendReq(url ,xmls).then(data=>{return data}).catch(err=>reject(err))
-                resolve( xmlParser.parse(data)['soap:Envelope']['soap:Body']['SalePaymentWithDiscountResponse']['SalePaymentWithDiscountResult'] )
+                let data = await sendReq(url ,xmls)
+                .then(data=>{return xmlParser.parse(data)['soap:Envelope']['soap:Body']['SalePaymentWithDiscountResponse']['SalePaymentWithDiscountResult']})
+                .catch(err=>reject(err))
+                data.link = `https://pec.shaparak.ir/NewIPG/?token=${data.Token}`
+                
+                resolve(data)
             }
             else reject('please provide "Amount", "OrderId" and "CallBackUrl" in an object. Also, you can add "AdditionalData", "Originator" and a list of "Product" which contains "PGroupId" and "Amount" in them')
         })
@@ -96,8 +104,12 @@ function sale (pin) {
                     </soap:Body>
                 </soap:Envelope>`
         
-                let data = await sendReq(url , xmls).then(data=>{return data}).catch(err=>reject(err))
-                resolve( xmlParser.parse(data)['soap:Envelope']['soap:Body']['SalePaymentRequestResponse']['SalePaymentRequestResult'] )
+                let data = await sendReq(url , xmls)
+                .then(data=>{return xmlParser.parse(data)['soap:Envelope']['soap:Body']['SalePaymentRequestResponse']['SalePaymentRequestResult']})
+                .catch(err=>reject(err))
+                data.link = `https://pec.shaparak.ir/NewIPG/?token=${data.Token}` 
+                
+                resolve(data)
             }
             else reject('please provide "Amount" , "OrderId" and "CallBackUrl" in an object. Also you can add "AdditionalData" and "Originator" ')
         })
@@ -125,8 +137,12 @@ function sale (pin) {
                     </soap:Body>
                 </soap:Envelope>`
         
-                let data = await sendReq(url , xmls).then(data=>{return data}).catch(err=>reject(err))
-                resolve( xmlParser.parse(data)['soap:Envelope']['soap:Body']['SalePaymentRequestResponse']['SalePaymentRequestResult'] )
+                let data = await sendReq(url , xmls)
+                .then(data=>{return xmlParser.parse(data)['soap:Envelope']['soap:Body']['SalePaymentRequestResponse']['SalePaymentRequestResult']})
+                .catch(err=>reject(err))
+                data.link = `https://pec.shaparak.ir/NewIPG/?token=${data.Token}`
+                
+                resolve(data)
             }
             else reject('please provide "Amount" , "OrderId" and "CallBackUrl" in an object. Also you can add "AdditionalData" and "Originator" ')
         })
