@@ -1,6 +1,6 @@
 فارسی | [English](./README.md)
 
-# Parsian E-commerce(PEC.ir) bank api
+# API درگاه پرداخت پارسیان
 
 [![Generic badge](https://img.shields.io/badge/Requirment-npm-green.svg)](https://www.npmjs.com/get-npm)  
 [![Generic badge](https://img.shields.io/badge/IPG-pec-blue.svg)](https://pec.ir/)
@@ -26,14 +26,14 @@ pec.sale.payment({"Amount":20000 ,  "OrderId" : 101112 , CallBackUrl: "https://e
 
 ## `sale` sub-functions
 
-برای این توابع که در جدول زیر به آنها اشاره کرده ایم باید آبجکتی به همراه کلید های ذکر شده ارسال شوند. _ توجه داشته باشید که کلیدها به حروف بزرگ کوچک حساس اند _
+برای این توابع که در جدول زیر به آنها اشاره کرده ایم باید آبجکتی به همراه کلید های ذکر شده ارسال شوند. __توجه داشته باشید که کلیدها به حروف بزرگ کوچک حساس اند__
 
 | sub-function name        | required keys :white_check_mark:                                                                  | optional keys :large_blue_circle: |
 | ------------------------ | ------------------------------------------------------------------------------------------------- | --------------------------------- |
-| payment                  | "Amount" , "OrderId" , "CallBackUrl"                                                              | "AdditionalData" , "Originator"   |
-| \*\* paymentWithDiscount | "Amount" , "OrderId" , "CallBackUrl" and array of "Product" which include "PGroupId" and "Amount" | "AdditionalData" , "Originator"   |
-| \*\* paymentWithId       | "Amount" , "OrderId" , "CallBackUrl"                                                              | "AdditionalData" , "Originator"   |
-| \*\* udPaymentRequest    | "Amount" , "OrderId" , "CallBackUrl"                                                              | "AdditionalData" , "Originator"   |
+| *payment*                  | "Amount" , "OrderId" , "CallBackUrl"                                                              | "AdditionalData" , "Originator"   |
+| *paymentWithDiscount* | "Amount" , "OrderId" , "CallBackUrl" and array of "Product" which include "PGroupId" and "Amount" | "AdditionalData" , "Originator"   |
+| *paymentWithId*       | "Amount" , "OrderId" , "CallBackUrl"                                                              | "AdditionalData" , "Originator"   |
+| *udPaymentRequest*    | "Amount" , "OrderId" , "CallBackUrl"                                                              | "AdditionalData" , "Originator"   |
 
 ### مثال
 
@@ -56,13 +56,13 @@ let data = pec.sale
 
 ## `confirm` sub-functions
 
-برای توابع زیر که در جدول آمده اند کافی است کلید دریافتی را ارسال نمایید. البته به غیر از مورد آخر که نیاز به ارسال آبجکت به همراه کلیدهای ذکر شده دارد. _ توجه داشته باشید که کلیدها به حروف بزرگ و کوچک حساس اند _
+برای توابع زیر که در جدول آمده اند کافی است کلید دریافتی را ارسال نمایید. البته به غیر از مورد آخر که نیاز به ارسال آبجکت به همراه کلیدهای ذکر شده دارد. __توجه داشته باشید که کلیدها به حروف بزرگ کوچک حساس اند__
 
 | sub-function name  | required keys :white_check_mark: | optional keys :large_blue_circle: |
 | ------------------ | -------------------------------- | --------------------------------- |
-| payment            | token                            | --                                |
-| paymentWithAddData | token                            | --                                |
-| paymentWithAmount  | "Token" , "OrderId" , "Amount"   | --                                |
+| *payment*           | token                            | --                                |
+| *paymentWithAddData* | token                            | --                                |
+| *paymentWithAmount*  | "Token" , "OrderId" , "Amount"   | --                                |
 
 ### مثال
 
@@ -83,7 +83,7 @@ pec.confirm
 
 | sub-function name | required keys :white_check_mark: | optional keys :large_blue_circle: |
 | ----------------- | -------------------------------- | --------------------------------- |
-| request           | token                            | --                                |
+| *request*          | token                            | --                                |
 
 ### مثال
 

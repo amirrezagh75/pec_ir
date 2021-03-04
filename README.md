@@ -1,8 +1,10 @@
 English | [فارسی](./README_fa.md)
 
-# Parsian E-commerce(PEC.ir) bank api
+# Parsian E-commerce(pec.ir) api
 [![Generic badge](https://img.shields.io/badge/Requirment-npm-green.svg)](https://www.npmjs.com/get-npm)    
 [![Generic badge](https://img.shields.io/badge/IPG-pec-blue.svg)](https://pec.ir/)
+
+
 
 This is a Node Js package for using pec.ir APIs which will help you to make a payment request, payment verification request, and payment reversal request easily.
 ## How to install?
@@ -20,14 +22,14 @@ This package includes 3 main functions: ``` sale```, ``` confirm ``` and ``` rev
 
 ## ```sale``` sub-functions
 
-For these sub-functions, you have to send an object with named keys. * Be careful, all the keys are case sensitive *
+For these sub-functions, you have to send an object with named keys. **Be careful, all the keys are case sensitive**
 
 | sub-function name| required keys :white_check_mark:| optional keys :large_blue_circle:|
 | -------------         |    -------------      |  ------------- |
 |    payment |   "Amount" , "OrderId" , "CallBackUrl"   |  "AdditionalData" , "Originator"   |
-|   ** paymentWithDiscount |   "Amount" , "OrderId" , "CallBackUrl" and array of "Product" which include "PGroupId" and "Amount"  |  "AdditionalData" , "Originator"   |
-|   ** paymentWithId |   "Amount" , "OrderId" , "CallBackUrl"   |  "AdditionalData" , "Originator"   |
-|   ** udPaymentRequest |   "Amount" , "OrderId" , "CallBackUrl"   |  "AdditionalData" , "Originator"   |
+|   paymentWithDiscount |   "Amount" , "OrderId" , "CallBackUrl" and array of "Product" which include "PGroupId" and "Amount"  |  "AdditionalData" , "Originator"   |
+|   paymentWithId |   "Amount" , "OrderId" , "CallBackUrl"   |  "AdditionalData" , "Originator"   |
+|   udPaymentRequest |   "Amount" , "OrderId" , "CallBackUrl"   |  "AdditionalData" , "Originator"   |
 
 
 ### e.g.
@@ -49,7 +51,7 @@ let data = pec.sale
 
 ## ```confirm``` sub-functions
 
-For these sub-functions, you need to send the token except the last one which needs an object with the keys. * Be careful, all the keys are case sensitive *
+For these sub-functions, you need to send the token except the last one which needs an object with the keys. **Be careful, all the keys are case sensitive**
 
 | sub-function name| required keys :white_check_mark:| optional keys :large_blue_circle:|
 | -------------         |    -------------      |  ------------- |
