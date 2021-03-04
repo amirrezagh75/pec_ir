@@ -1,6 +1,6 @@
 {
   "name": "pec_ir",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tejarat Electronic Parsian api",
   "main": "index.js",
   "scripts": {
