@@ -4,6 +4,7 @@ English | [فارسی](./README_fa.md)
 [![Generic badge](https://img.shields.io/badge/Requirment-npm-green.svg)](https://www.npmjs.com/get-npm)    
 [![Generic badge](https://img.shields.io/badge/IPG-pec-blue.svg)](https://pec.ir/)
 
+[![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://github.com/amirrezagh75/pec_ir)
 
 
 This is a Node Js package for using pec.ir APIs which will help you to make a payment request, payment verification request, and payment reversal request easily.
@@ -71,7 +72,7 @@ pec.confirm
 
 // { Status: 200,  Message: '', Token: 0 }
 ```
-## ```reversal``` sub-functions
+## ```reversal``` sub-function
 This function includes only one sub-function which requires a token.
 
 

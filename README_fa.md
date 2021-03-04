@@ -5,6 +5,8 @@
 [![Generic badge](https://img.shields.io/badge/Requirment-npm-green.svg)](https://www.npmjs.com/get-npm)  
 [![Generic badge](https://img.shields.io/badge/IPG-pec-blue.svg)](https://pec.ir/)
 
+[![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://github.com/amirrezagh75/pec_ir)
+
 این پکیج برای استفاده از درگاه پرداختی تجارت الکترونیک پارسیان می باشد و به شما امکان درخواست پرداخت، درخواست تاییدیه و درخواست بازگشت پرداخت را می دهد.
 
 ## چگونه نصب کنیم؟
@@ -77,7 +79,7 @@ pec.confirm
 // { Status: 200,  Message: '', Token: 0 }
 ```
 
-## `reversal` sub-functions
+## `reversal` sub-function
 
 این تابع فقط شامل یک زیر تابع است که کافی است تا توکن دریافت شده را به آن بدهید.
 
