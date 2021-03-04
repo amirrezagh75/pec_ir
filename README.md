@@ -12,7 +12,7 @@ npm install pec_ir
 ```
 ## How to use?
 ```
-let pec = require("pec_ir")
+let pec = require("pec_ir")("your PIN")
 
 pec.sale.payment({"Amount":20000 ,  "OrderId" : 101112 , CallBackUrl: "https://example.com/confirmPayment"})
 ```
@@ -32,7 +32,7 @@ For these sub-functions, you have to send an object with named keys. * Be carefu
 
 ### e.g.
 ```
-let pec = require("pec_ir")
+let pec = require("pec_ir")("your PIN")
 
 let data = pec.sale
 .paymentWithDiscount({ 
@@ -60,7 +60,7 @@ For these sub-functions, you need to send the token except the last one which ne
 
 ### e.g. 
 ```
-let pec = require("pec_ir")
+let pec = require("pec_ir")("your PIN")
 
 pec.confirm
 .payment(2022254)
@@ -80,7 +80,7 @@ This function includes only one sub-function which requires a token.
 ### e.g. 
 
 ```
-let pec = require("pec_ir")
+let pec = require("pec_ir")("your PIN")
 
 pec.reversal
 .request(2022254)
