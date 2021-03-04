@@ -1,0 +1,20 @@
+{
+  "name": "pec-api",
+  "version": "1.0.0",
+  "description": "Tejarat Electronic Parsian REST api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rest_api",
+    "pec_api",
+    "pec_rest_api"
+  ],
+  "author": "Amirrezagh75",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "fast-xml-parser": "^3.18.0"
+  }
+}
