@@ -11,7 +11,7 @@
     "pec_api",
     "pec_rest_api"
   ],
-  "author": "Amirrezagh75",
+  "author": "Amirrezagh75 <mypersonal048@gmail.com> (http://amirrezagh75.ir)",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
