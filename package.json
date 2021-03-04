@@ -1,7 +1,7 @@
 {
-  "name": "pec-api",
+  "name": "pec_ir",
   "version": "1.0.0",
-  "description": "Tejarat Electronic Parsian REST api",
+  "description": "Tejarat Electronic Parsian api",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
