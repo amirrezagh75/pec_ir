@@ -22,8 +22,8 @@ let reversal = (pin)=>{
                 </soap:Body>
                 </soap:Envelope>`
         
-                let data = await sendReq(url , xmls).then(res=>{return res}).catch(err=>reject(err))
-                resolve( xmlParser.parse(data)['soap:Envelope']['soap:Body']['ReversalRequestResponse']['ReversalRequestResult'] )
+                let data = await sendReq(url , xmls).then(res=>{return xmlParser.parse(res)['soap:Envelope']['soap:Body']['ReversalRequestResponse']['ReversalRequestResult']}).catch(err=>reject(err))
+                resolve(data)
             }
             else reject('please provide the token')
         })

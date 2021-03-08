@@ -28,7 +28,7 @@ function sale (pin) {
                 </soap:Envelope>`
         
                 let data = await sendReq(url , xmls)
-                .then(data=>{return xmlParser.parse(data)['soap:Envelope']['soap:Body']['SalePaymentRequestResponse']['SalePaymentRequestResult']})
+                .then(res=>{return xmlParser.parse(res)['soap:Envelope']['soap:Body']['SalePaymentRequestResponse']['SalePaymentRequestResult']})
                 .catch(err=>reject(err))
                 data.link = `https://pec.shaparak.ir/NewIPG/?token=${data.Token}`
                 
@@ -72,7 +72,7 @@ function sale (pin) {
                 </soap:Envelope>`
     
                 let data = await sendReq(url ,xmls)
-                .then(data=>{return xmlParser.parse(data)['soap:Envelope']['soap:Body']['SalePaymentWithDiscountResponse']['SalePaymentWithDiscountResult']})
+                .then(res=>{return xmlParser.parse(res)['soap:Envelope']['soap:Body']['SalePaymentWithDiscountResponse']['SalePaymentWithDiscountResult']})
                 .catch(err=>reject(err))
                 data.link = `https://pec.shaparak.ir/NewIPG/?token=${data.Token}`
                 
@@ -105,7 +105,7 @@ function sale (pin) {
                 </soap:Envelope>`
         
                 let data = await sendReq(url , xmls)
-                .then(data=>{return xmlParser.parse(data)['soap:Envelope']['soap:Body']['SalePaymentRequestResponse']['SalePaymentRequestResult']})
+                .then(res=>{return xmlParser.parse(res)['soap:Envelope']['soap:Body']['SalePaymentWithIdResponse']['SalePaymentWithIdResult']})
                 .catch(err=>reject(err))
                 data.link = `https://pec.shaparak.ir/NewIPG/?token=${data.Token}` 
                 
@@ -138,7 +138,7 @@ function sale (pin) {
                 </soap:Envelope>`
         
                 let data = await sendReq(url , xmls)
-                .then(data=>{return xmlParser.parse(data)['soap:Envelope']['soap:Body']['SalePaymentRequestResponse']['SalePaymentRequestResult']})
+                .then(res=>{return xmlParser.parse(res)['soap:Envelope']['soap:Body']['UDSalePaymentRequestResponse']['UDSalePaymentRequestResult']})
                 .catch(err=>reject(err))
                 data.link = `https://pec.shaparak.ir/NewIPG/?token=${data.Token}`
                 
