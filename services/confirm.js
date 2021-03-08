@@ -22,6 +22,7 @@ function confirm(pin){
                 </soap:Envelope>`
         
                 let data = await sendReq(url , xmls).then(res=>{return xmlParser.parse(res)['soap:Envelope']['soap:Body']['ConfirmPaymentResponse']['ConfirmPaymentResult'] }).catch(err=>reject(err))
+                
                 resolve(data)
             }
             else reject('please provide a token')
